@@ -38,7 +38,7 @@ if [ "${RUN_TRAIN}" = "1" ]; then
     echo "============================================================"
     echo "=> Training  (train_path=${TRAIN_PATH}, split=${TRAIN_SPLIT})"
     echo "============================================================"
-    $PYTHON train_genimage.py \
+    $PYTHON train.py \
         --train_path "${TRAIN_PATH}" \
         --split "${TRAIN_SPLIT}" \
         --features_path "${TRAIN_FEATURES}" \
@@ -64,7 +64,7 @@ if [ "${RUN_EVAL}" = "1" ]; then
     echo "============================================================"
     echo "=> Evaluation  (test_path=${TEST_PATH})"
     echo "============================================================"
-    $PYTHON eval_genimage.py \
+    $PYTHON eval.py \
         --genimage_test_path "${TEST_PATH}" \
         --output_dir "${TEST_FEATURES}" \
         --features_dir "${TEST_FEATURES}" \
